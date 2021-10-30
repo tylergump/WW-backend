@@ -44,7 +44,21 @@ const updateUser = (req, res) => {
         (error, updatedUser) => {
             if (error) 
                 return res.status(400).json({error: error.message})
-        })
+                return res.status(200).json(updateUser)
+        }) 
+}
+
+const deleteUser = (req, res) => {
+  db.User.findByIdAndDelete (
+      req.params.id,
+      (error, deleteUser) => {
+          if (error) 
+              return res.status(400).json({error: error.message})
+
+              return res.status(200).json ({
+                message: "Account Deleted"
+              })
+      })
 }
 
 const logout = (req, res) => {
@@ -58,5 +72,6 @@ module.exports = {
   signup,
   login,
   updateUser,
+  deleteUser,
   logout,
 }

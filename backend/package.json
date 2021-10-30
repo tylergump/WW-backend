@@ -15,7 +15,6 @@
   "description": "Wags & Whiskers is a cat and dog matchup app that matches prospective pet owners to their ideal cat or dog. Ideal matches will be found based on what the owner places in their profile and comparing them with animals from the petfinder api.",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"

@@ -2,6 +2,7 @@
   "dependencies": {
     "@petfinder/petfinder-js": "^1.0.6",
     "bcrypt": "^5.0.1",
+    "connect-mongodb-session": "^3.1.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
@@ -14,6 +15,9 @@
   "name": "backend",
   "description": "Wags & Whiskers is a cat and dog matchup app that matches prospective pet owners to their ideal cat or dog. Ideal matches will be found based on what the owner places in their profile and comparing them with animals from the petfinder api.",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.17.1"
+  },
   "main": "server.js",
   "keywords": [],
   "author": "",

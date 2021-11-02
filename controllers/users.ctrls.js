@@ -37,25 +37,15 @@ const login = (req, res) => {
 }
 
 const updateUser = (req, res) => {
-<<<<<<< HEAD
-    db.User.findByIdAndUpdate (
-=======
-    db.User.findByIdAndUpdate(
-<<<<<<< HEAD
->>>>>>> 5a6d2e1 (fixed typo in put route)
-=======
-    db.User.findByIdAndUpdate (
->>>>>>> 2dd264f (need to pull and push again for heroku for some reason)
-        req.params.id,
-        req.body,
-        {new: true},
-        (error, updatedUser) => {
-            if (error) {
-                return res.status(400).json({error: error.message})
-            } else {
-                return res.status(200).json(updatedUser)
-            }
-        }) 
+  db.User.findByIdAndUpdate (
+      req.params.id,
+      req.body,
+      {new:true},
+      (error, updatedUser) => {
+          if (error) 
+              return res.status(400).json({error: error.message})
+              return res.status(200).json(updatedUser)
+      }) 
 }
 
 const deleteUser = (req, res) => {

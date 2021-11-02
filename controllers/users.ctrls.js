@@ -37,10 +37,14 @@ const login = (req, res) => {
 }
 
 const updateUser = (req, res) => {
+<<<<<<< HEAD
     db.User.findByIdAndUpdate (
+=======
+    db.User.findByIdAndUpdate(
+>>>>>>> 5a6d2e1 (fixed typo in put route)
         req.params.id,
         req.body,
-        {new:true},
+        {new: true},
         (error, updatedUser) => {
             if (error) {
                 return res.status(400).json({error: error.message})
@@ -51,7 +55,7 @@ const updateUser = (req, res) => {
 }
 
 const deleteUser = (req, res) => {
-  db.User.findByIdAndDelete (
+  db.User.findByIdAndDelete(
       req.params.id,
       (error, deleteUser) => {
           if (error) {

@@ -41,7 +41,11 @@ const updateUser = (req, res) => {
     db.User.findByIdAndUpdate (
 =======
     db.User.findByIdAndUpdate(
+<<<<<<< HEAD
 >>>>>>> 5a6d2e1 (fixed typo in put route)
+=======
+    db.User.findByIdAndUpdate (
+>>>>>>> 2dd264f (need to pull and push again for heroku for some reason)
         req.params.id,
         req.body,
         {new: true},

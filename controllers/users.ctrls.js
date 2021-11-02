@@ -42,9 +42,11 @@ const updateUser = (req, res) => {
         req.body,
         {new:true},
         (error, updatedUser) => {
-            if (error) 
+            if (error) {
                 return res.status(400).json({error: error.message})
+            } else {
                 return res.status(200).json(updatedUser)
+            }
         }) 
 }
 
@@ -52,12 +54,13 @@ const deleteUser = (req, res) => {
   db.User.findByIdAndDelete (
       req.params.id,
       (error, deleteUser) => {
-          if (error) 
+          if (error) {
               return res.status(400).json({error: error.message})
-
+          } else {
               return res.status(200).json ({
                 message: "Account Deleted"
               })
+            }
       })
 }
 

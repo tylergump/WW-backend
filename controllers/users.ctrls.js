@@ -37,7 +37,7 @@ const login = (req, res) => {
 }
 
 const updateUser = (req, res) => {
-    db.User.findbyIdAndUpdate (
+    db.User.findByIdAndUpdate (
         req.params.id,
         req.body,
         {new:true},
